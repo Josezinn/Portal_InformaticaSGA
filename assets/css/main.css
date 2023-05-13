@@ -23,11 +23,24 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+	scroll-behavior: smooth;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
+
+#topo{
+	background-color: white;
+	display: flex;
+	width: 100%;
+	z-index: 10000;
+}
+
+#topo, #nav{
+	position: fixed;
+}
 
 body {
 	line-height: 1;
@@ -72,6 +85,7 @@ input, select, textarea {
 	appearance: none;
 }
 
+
 /* Basic */
 
 	html {
@@ -82,9 +96,6 @@ input, select, textarea {
 		box-sizing: inherit;
 	}
 
-	body {
-		padding-top: 3.5em;
-	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 			-moz-animation: none !important;
@@ -127,7 +138,7 @@ input, select, textarea {
 		color: #3e3e3e;
 	}
 
-	i, em {
+	i{
 		font-style: italic;
 	}
 
@@ -183,9 +194,22 @@ input, select, textarea {
 		letter-spacing: -0.015em;
 	}
 
-	em, i {
+	#logo{
+		display: inline-block;
+		margin-top: 0.4em;
+		margin-bottom: 0.5em;
+	}
+
+	i {
 		font-style: italic;
 	}
+
+	em{
+		font-size: 0.5em;
+		display: block;
+	}
+
+
 
 	br.clear {
 		clear: both;
@@ -212,6 +236,8 @@ input, select, textarea {
 			font-size: 1.25em;
 			margin: 0;
 		}
+
+		
 
 	footer {
 		margin: 3em 0 0 0;
@@ -1505,73 +1531,6 @@ input, select, textarea {
 
 		}
 
-/* Form */
-
-	form label {
-		color: #3e3e3e;
-		font-weight: 700;
-		display: block;
-		margin: 0 0 0.5em 0;
-	}
-
-	form input[type=text],
-	form input[type=email],
-	form input[type=password],
-	form select,
-	form textarea {
-		-moz-transition: background .2s ease-in-out, box-shadow .2s ease-in-out;
-		-webkit-transition: background .2s ease-in-out, box-shadow .2s ease-in-out;
-		-ms-transition: background .2s ease-in-out, box-shadow .2s ease-in-out;
-		transition: background .2s ease-in-out, box-shadow .2s ease-in-out;
-		-webkit-appearance: none;
-		display: block;
-		border: 0;
-		padding: 0.75em;
-		font-size: 1em;
-		border-radius: 8px;
-		border: solid 1px #ddd;
-		background: #fff;
-		color: #bbb;
-		box-shadow: inset 0px 2px 3px 1px rgba(0, 0, 0, 0.05), 0px 1px 0px 0px rgba(255, 255, 255, 0.025);
-		width: 100%;
-	}
-
-		form input[type=text]:focus,
-		form input[type=email]:focus,
-		form input[type=password]:focus,
-		form select:focus,
-		form textarea:focus {
-			background: #fafafa;
-			box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.05), 0px 1px 0px 0px rgba(255, 255, 255, 0.025), inset 0px 0px 2px 1px #43bff0;
-		}
-
-	form textarea {
-		height: 15em;
-	}
-
-	form .actions:last-child {
-		margin-bottom: 0;
-	}
-
-	form ::-webkit-input-placeholder {
-		color: #555 !important;
-	}
-
-	form :-moz-placeholder {
-		color: #555 !important;
-	}
-
-	form ::-moz-placeholder {
-		color: #555 !important;
-	}
-
-	form :-ms-input-placeholder {
-		color: #555 !important;
-	}
-
-	form ::-moz-focus-inner {
-		border: 0;
-	}
 
 /* Tables */
 
@@ -1627,6 +1586,14 @@ input, select, textarea {
 		position: relative;
 	}
 
+	.logoIF {
+		display: inline-block;
+		width: 3em;
+		height: 4em;
+		margin: 1em;
+		margin-top: 1em;
+	}
+
 		.image img {
 			display: block;
 			width: 100%;
@@ -1658,92 +1625,7 @@ input, select, textarea {
 				width: auto;
 			}
 
-/* Button */
 
-	input[type="button"],
-	input[type="submit"],
-	input[type="reset"],
-	button,
-	.button {
-		background-image: url("images/bg.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-		background-image: url("images/bg.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-		background-image: url("images/bg.png"), -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-		background-image: url("images/bg.png"), linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-		-moz-transition: background-color .2s ease-in-out;
-		-webkit-transition: background-color .2s ease-in-out;
-		-ms-transition: background-color .2s ease-in-out;
-		transition: background-color .2s ease-in-out;
-		-webkit-appearance: none;
-		position: relative;
-		display: inline-block;
-		color: #fff !important;
-		text-decoration: none;
-		font-weight: 700;
-		border: 0;
-		outline: 0;
-		cursor: pointer;
-		border-radius: 8px;
-		text-shadow: -1px -1px 0.5px rgba(0, 0, 0, 0.5);
-		overflow: hidden;
-		box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px 2px 1px 0px rgba(255, 255, 255, 0.75);
-		background-color: #43B3E0;
-		padding: 1em 2.35em 1em 2.35em;
-		font-size: 1.1em;
-		max-width: 24em;
-	}
-
-		input[type="button"]:hover,
-		input[type="submit"]:hover,
-		input[type="reset"]:hover,
-		button:hover,
-		.button:hover {
-			background-color: #43bff0;
-			color: #fff !important;
-		}
-
-		input[type="button"]:active,
-		input[type="submit"]:active,
-		input[type="reset"]:active,
-		button:active,
-		.button:active {
-			background-color: #3BA8D3;
-			top: 1px;
-		}
-
-		input[type="button"].large,
-		input[type="submit"].large,
-		input[type="reset"].large,
-		button.large,
-		.button.large {
-			font-size: 1.5em;
-			letter-spacing: -0.025em;
-		}
-
-		input[type="button"].alt,
-		input[type="submit"].alt,
-		input[type="reset"].alt,
-		button.alt,
-		.button.alt {
-			background-color: #444;
-			box-shadow: inset 0px 0px 0px 1px #242424, inset 0px 2px 1px 0px rgba(255, 255, 255, 0.2);
-		}
-
-			input[type="button"].alt:hover,
-			input[type="submit"].alt:hover,
-			input[type="reset"].alt:hover,
-			button.alt:hover,
-			.button.alt:hover {
-				background-color: #4f4f4f;
-				color: #fff !important;
-			}
-
-			input[type="button"].alt:active,
-			input[type="submit"].alt:active,
-			input[type="reset"].alt:active,
-			button.alt:active,
-			.button.alt:active {
-				background-color: #3f3f3f;
-			}
 
 /* List */
 
@@ -1908,6 +1790,8 @@ input, select, textarea {
 				margin-left: 0;
 			}
 
+			
+
 /* Box */
 
 	.box {
@@ -2018,29 +1902,14 @@ input, select, textarea {
 				color: #fff;
 			}
 
-			.wrapper.style4 form input[type=text],
-			.wrapper.style4 form input[type=password],
-			.wrapper.style4 form select,
-			.wrapper.style4 form textarea {
-				border: none;
-				background: #282828;
-			}
-
-				.wrapper.style4 form input[type=text]:focus,
-				.wrapper.style4 form input[type=password]:focus,
-				.wrapper.style4 form select:focus,
-				.wrapper.style4 form textarea:focus {
-					background: #252525;
-				}
 
 /* Nav */
 
 	#nav {
 		background-color: #282828;
 		text-align: center;
-		position: fixed;
 		left: 0;
-		top: 0;
+		top: 8em;
 		width: 100%;
 		z-index: 10000;
 		cursor: default;
@@ -2089,7 +1958,6 @@ input, select, textarea {
 				#nav a.active:before {
 					content: '';
 					display: block;
-					position: absolute;
 					bottom: -0.6em;
 					left: 50%;
 					margin-left: -0.75em;
@@ -2098,7 +1966,13 @@ input, select, textarea {
 					border-top: solid 0.6em #282828;
 				}
 
+			
+
 /* Articles */
+	
+	#articles{
+		padding-top: 7em;
+	}
 
 	body > article {
 		margin-bottom: 0;
@@ -2193,6 +2067,10 @@ input, select, textarea {
 				margin: 0 0 4em 0;
 			}
 
+			#topo{
+				margin-top: 0.7em;
+			}
+
 		/* Wrappers */
 
 			.wrapper {
@@ -2206,7 +2084,7 @@ input, select, textarea {
 				}
 
 		/* Articles */
-
+			
 			#top {
 				padding: 8em 0;
 			}
@@ -2242,9 +2120,27 @@ input, select, textarea {
 
 		/* Basic */
 
-			body {
-				padding-top: 44px;
-			}
+		#logo{
+			margin-top: 0.3em;
+			margin-bottom: 0;
+		}
+
+		.logoIF{
+			margin: 0.9em;
+			margin-top: 0.5em;
+			width: 3em;
+			height: 4em;
+		}
+
+		#nav{
+			top: 7em;
+		}
+
+		em{
+			margin: 0;
+			padding: 0;
+		}
+
 
 			body, input, textarea, select {
 				line-height: 1.75em;
@@ -2288,28 +2184,7 @@ input, select, textarea {
 				clear: both;
 			}
 
-		/* Button */
-
-			input[type="button"],
-			input[type="submit"],
-			input[type="reset"],
-			button,
-			.button {
-				text-align: center;
-				font-size: 1.2em;
-				width: 100%;
-				padding: 1em 0 1em 0;
-			}
-
-				input[type="button"].large,
-				input[type="submit"].large,
-				input[type="reset"].large,
-				button.large,
-				.button.large {
-					font-size: 1.2em;
-					letter-spacing: 0;
-				}
-
+		
 		/* Social */
 
 			ul.social {
