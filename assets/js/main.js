@@ -32,3 +32,16 @@
 		});
 
 })(jQuery);
+
+let btnTopo = document.querySelector(".btn-topo");
+
+
+// Funcao que faz aparecer o botão de voltar ao topo quando a página é scrollada em um certo ponto
+window.addEventListener("scroll", () => {
+	if (window.scrollY > 100) {
+		btnTopo.classList.add("active");
+	}
+	else {
+		btnTopo.classList.remove("active");
+	}
+})

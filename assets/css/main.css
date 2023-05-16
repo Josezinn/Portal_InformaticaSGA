@@ -122,7 +122,7 @@ input, select, textarea {
 		-ms-transition: color .2s ease-in-out;
 		transition: color .2s ease-in-out;
 		color: #43B3E0;
-		text-decoration: underline;
+		text-decoration: none;
 	}
 
 		a:hover {
@@ -247,6 +247,34 @@ input, select, textarea {
 			font-size: 1.25em;
 		}
 
+
+/* Botao para voltar ao topo da pagina */
+	.btn-topo {
+		visibility: hidden;
+	}
+	.btn-topo.active {
+		visibility: visible;
+		position: fixed;
+		bottom: 15px;
+		left: 15px;
+		width: 35px;
+		height: 35px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #319e41;
+		border-radius: 100%;
+		font-size: 1.7rem;
+	}
+
+	.btn-topo.active:hover {
+		filter: brightness(1.1);
+	}
+
+	.btn-topo.active:active {
+		transform: scale(.9);
+		filter: brightness(.9);
+	}
 /* Container */
 
 	.container {
