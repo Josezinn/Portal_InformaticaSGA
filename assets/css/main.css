@@ -1916,23 +1916,48 @@ input, select, textarea {
 
 	/* Tela informática */
 
+	.professores{
+		display: flex; 
+		align-items: center;
+		gap: 100px;
+		margin-bottom: 5%;
+	}
 	
-	#professores img{
+	.professores img{
 		border-radius: 50%;
 		width: 20em;
 		height: 20em;
 	}
 
-	#professores h2{
+	.professores h2{
 		text-align: center;
 	}
 
-	#professores img, h3{
+	.professores img, h3{
 		display: inline-block;
 	}
 
-	#professores h3{
+	.professores h3{
 		float: right;
+	}
+
+	#curso p {
+		text-align: justify;
+		margin: 0;
+		margin-top: 1em;
+
+	}
+	#curso h4 {
+		margin: 1em;
+		text-align: left;
+		margin-left: 0;
+	}
+	#curso h3 {
+		margin: 1em;
+	}
+
+	#curso header {
+		margin: 0;
 	}
 
 /* Copyright */
