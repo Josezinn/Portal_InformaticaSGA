@@ -1920,13 +1920,13 @@ input, select, textarea {
 		display: flex; 
 		align-items: center;
 		gap: 100px;
-		margin-bottom: 5%;
+		margin-bottom: 5%;	
 	}
 	
 	.professores img{
 		border-radius: 50%;
-		width: 20em;
-		height: 20em;
+		width: 10em;
+		height: 10em;
 	}
 
 	.professores h2{
@@ -1945,15 +1945,22 @@ input, select, textarea {
 		text-align: justify;
 		margin: 0;
 		margin-top: 1em;
-
+		color: #000;
 	}
+
+	#curso h2 {
+		margin: 1em;
+	}
+
 	#curso h4 {
 		margin: 1em;
 		text-align: left;
 		margin-left: 0;
 	}
+
 	#curso h3 {
-		margin: 1em;
+		margin: 0,5em;
+		margin-bottom: 2em;
 	}
 
 	#curso header {
