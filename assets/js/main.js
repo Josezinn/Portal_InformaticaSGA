@@ -45,3 +45,11 @@ window.addEventListener("scroll", () => {
 		btnTopo.classList.remove("active");
 	}
 })
+
+let menu=[...document.querySelectorAll("#nav a")]
+menu.map((item)=>{
+	item.addEventListener("click",(e)=>{
+		e.preventDefault()
+		item.classList.toggle("selected")
+		})
+})

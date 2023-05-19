@@ -1819,6 +1819,10 @@ input, select, textarea {
 		line-height: 3.5em;
 	}
 
+	#nav a.selected{
+		background-color:#46af39;
+	}
+
 		#nav ul {
 			margin-bottom: 0;
 			list-style: none;
@@ -1916,17 +1920,24 @@ input, select, textarea {
 
 	/* Tela informática */
 
+	.professores-container{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+	}
+
 	.professores{
 		display: flex; 
 		align-items: center;
-		gap: 100px;
+		gap: 10%;
 		margin-bottom: 5%;	
 	}
 	
 	.professores img{
 		border-radius: 50%;
-		width: 10em;
-		height: 10em;
+		width: 15em;
+		height: 15em;
 	}
 
 	.professores h2{
