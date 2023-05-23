@@ -1675,6 +1675,25 @@ input, select, textarea {
 			padding-left: 0.25em;
 		}
 
+		.container li{
+			position:relative;
+			float:center;
+			}
+			
+		.container li  ul{
+			position:absolute;
+			top:25px;
+			left:0;
+			background-color:#378a34;
+			display:none;
+			}
+
+			.container li:hover ul, .container li.over ul{display:block;}
+
+			.container li ul li{
+				display:block;
+				width:150px;
+			}				
 
 /* Actions */
 
@@ -1918,7 +1937,7 @@ input, select, textarea {
 		font-size: 0.9em;
 	}
 
-	/* Tela informática */
+	/* Tela inicial */
 
 	.professores-container{
 		display: flex;
@@ -2058,7 +2077,6 @@ input, select, textarea {
 					height: 24em;
 					margin: 0;
 				}
-
 	}
 
 /* Medium */
@@ -2088,6 +2106,8 @@ input, select, textarea {
 		height: 3.5em;
 		line-height: 3.5em;
 	}
+
+
 
 	}
 

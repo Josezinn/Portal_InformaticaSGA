@@ -25,31 +25,9 @@
 			}, 100);
 		});
 
-	// Scrolly.
-		$('#nav a, .scrolly').scrolly({
-			speed: 1000,
-			offset: function() { return $nav.height(); }
-		});
+	
 
 })(jQuery);
 
 let btnTopo = document.querySelector(".btn-topo");
 
-
-// Funcao que faz aparecer o botão de voltar ao topo quando a página é scrollada em um certo ponto
-window.addEventListener("scroll", () => {
-	if (window.scrollY > 100) {
-		btnTopo.classList.add("active");
-	}
-	else {
-		btnTopo.classList.remove("active");
-	}
-})
-
-let menu=[...document.querySelectorAll("#nav a")]
-menu.map((item)=>{
-	item.addEventListener("click",(e)=>{
-		e.preventDefault()
-		item.classList.toggle("selected")
-		})
-})
