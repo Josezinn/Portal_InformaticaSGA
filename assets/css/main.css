@@ -245,8 +245,7 @@ input, select, textarea {
 			font-size: 1.25em;
 		}
 
-
-
+		
 
 /* Botao para voltar ao topo da pagina */
 	.btn-topo {
@@ -1954,9 +1953,8 @@ input, select, textarea {
 	}
 	
 	.professores img{
-		border-radius: 50px;
-		width: 200px;
-		height: 200px;
+		border-radius: 50%;
+		
 	}
 
 	.professores h2{
@@ -2020,6 +2018,11 @@ input, select, textarea {
 	#eventos header {
 		margin: 0;
 	}
+
+	#eventos h3 {
+		margin: 0,5em;
+		margin-bottom: 2em;
+	}
 	
 
 /* Copyright */
@@ -2063,7 +2066,7 @@ input, select, textarea {
 
 /* Large */
 
-	@media screen and (max-width: 1280px) {
+	@media screen and (min-width: 1680px) {
 
 		/* Basic */
 
@@ -2105,9 +2108,29 @@ input, select, textarea {
 					height: 24em;
 					margin: 0;
 				}
-	}
 
-	/*Images*/
+				#descricao-curso{
+					max-width: 50%;
+					text-align: justify;
+					font-size: large;
+				}
+
+				.apresentacao-curso{
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+				}
+				
+				
+				
+				#logo-curso{
+					max-width: 40%;
+					border-radius: 20px;
+				}
+
+				
+
+	}
 
 
 /* Medium */
@@ -2148,6 +2171,9 @@ input, select, textarea {
 
 		/* Basic */
 
+		#logo-curso{
+			max-width: 40%;
+		}
 		#logo{
 			margin-top: 0.3em;
 			margin-bottom: 0;
@@ -2172,7 +2198,7 @@ input, select, textarea {
 		height: 3.5em;
 		line-height: 3.5em;
 	}
-
+	
 
 		em{
 			margin: 0;
@@ -2323,6 +2349,8 @@ input, select, textarea {
 			#geral{
 				margin-top: 3em;
 			}
+
+			
 
 		/* Copyright */
 
