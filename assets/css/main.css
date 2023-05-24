@@ -36,7 +36,9 @@ footer, header, hgroup, menu, nav, section {
 	display: flex;
 	width: 100%;
 	z-index: 10000;
+	justify-content: center;
 }
+
 
 #topo, #nav{
 	position: fixed;
@@ -161,7 +163,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #3e3e3e;
+		color: #000000;
 		margin: 0 0 0.75em 0;
 	}
 
@@ -199,6 +201,7 @@ input, select, textarea {
 		margin-top: 0.4em;
 		margin-bottom: 0.5em;
 	}
+
 
 	i {
 		font-style: italic;
@@ -246,34 +249,6 @@ input, select, textarea {
 		}
 
 		
-
-/* Botao para voltar ao topo da pagina */
-	.btn-topo {
-		visibility: hidden;
-	}
-	.btn-topo.active {
-		visibility: visible;
-		position: fixed;
-		bottom: 15px;
-		left: 15px;
-		width: 35px;
-		height: 35px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background-color: #61af6d;
-		border-radius: 100%;
-		font-size: 1.7rem;
-	}
-
-	.btn-topo.active:hover {
-		filter: brightness(1.1);
-	}
-
-	.btn-topo.active:active {
-		transform: scale(.9);
-		filter: brightness(.9);
-	}
 /* Container */
 
 	.container {
@@ -1559,39 +1534,6 @@ input, select, textarea {
 		}
 
 
-/* Tables */
-
-	table {
-		width: 100%;
-	}
-
-		table.default {
-			width: 100%;
-		}
-
-			table.default tr {
-				border-top: solid 1px #eee;
-			}
-
-				table.default tr:first-child {
-					border-top: 0;
-				}
-
-			table.default td {
-				padding: 0.5em 1em 0.5em 1em;
-			}
-
-			table.default th {
-				text-align: left;
-				padding: 0.5em 1em 0.5em 1em;
-				font-weight: 600;
-				margin: 0 0 1em 0;
-			}
-
-			table.default thead {
-				background: #4f4f4f;
-				color: #fff;
-			}
 
 /* Section/Article */
 
@@ -1615,10 +1557,9 @@ input, select, textarea {
 
 	.logoIF {
 		display: inline-block;
-		width: 3em;
-		height: 4em;
+		width: 4em;
+		height: 5em;
 		margin: 1em;
-		margin-top: 1em;
 	}
 
 		.image img {
@@ -1742,52 +1683,6 @@ input, select, textarea {
 			width: auto;
 		}
 
-/* Icons */
-
-	.icon {
-		text-decoration: none;
-		text-decoration: none;
-	}
-
-		.icon:before {
-			-moz-osx-font-smoothing: grayscale;
-			-webkit-font-smoothing: antialiased;
-			display: inline-block;
-			font-style: normal;
-			font-variant: normal;
-			text-rendering: auto;
-			line-height: 1;
-			text-transform: none !important;
-			font-family: 'Font Awesome 5 Free';
-			font-weight: 400;
-		}
-
-		.icon:before {
-			font-size: 1.25em;
-		}
-
-		.icon > .label {
-			display: none;
-		}
-
-		.icon.solid:before {
-			font-weight: 900;
-		}
-
-		.icon.brands:before {
-			font-family: 'Font Awesome 5 Brands';
-		}
-
-		.icon.featured {
-			color: #EA8A95;
-			display: block;
-			margin: 0 0 1.5em 0;
-			cursor: default;
-		}
-
-			.icon.featured:before {
-				font-size: 6em;
-			}
 
 /* Wrappers */
 
@@ -1812,21 +1707,12 @@ input, select, textarea {
 			text-shadow: 1px 1px 0px #fff;
 		}
 
-		.wrapper.style4 {
-			background-color: #303030;
-			color: #999;
-			text-shadow: -1px -1px 0px #181818;
-		}
-
-			.wrapper.style4 h1, .wrapper.style4 h2, .wrapper.style4 h3, .wrapper.style4 h4, .wrapper.style4 h5, .wrapper.style4 h6 {
-				color: #426838;
-			}
 
 
 /* Nav */
 
 	#nav {
-		background-color: #428646;
+		background-color:  #2f9e41;
 		text-align: center;
 		left: 0;
 		top: 6em;
@@ -1954,7 +1840,7 @@ input, select, textarea {
 	
 	.professores img{
 		border-radius: 50%;
-		
+		max-width: 30%;
 	}
 
 	.professores h2{
@@ -1972,6 +1858,7 @@ input, select, textarea {
 	.professores p {
 		float: left;
 		text-align: justify;
+		font-size: medium;
 	}
 
 	#curso p {
@@ -1979,6 +1866,7 @@ input, select, textarea {
 		margin: 0;
 		margin-top: 1em;
 		color: #000;
+		font-size: medium;
 	}
 
 	#curso h2 {
@@ -2066,7 +1954,7 @@ input, select, textarea {
 
 /* Large */
 
-	@media screen and (min-width: 1680px) {
+	@media screen and (min-width: 1400px) {
 
 		/* Basic */
 
@@ -2110,25 +1998,25 @@ input, select, textarea {
 				}
 
 				#descricao-curso{
-					max-width: 50%;
 					text-align: justify;
 					font-size: large;
 				}
 
 				.apresentacao-curso{
 					display: flex;
-					justify-content: space-between;
+					justify-content: space-around;
 					align-items: center;
 				}
-				
-				
-				
+
+
 				#logo-curso{
-					max-width: 40%;
-					border-radius: 20px;
+					max-width: 50%;
+					padding: 29px;
 				}
 
-				
+				#egressos, #curso, #documentos, #eventos {
+					padding-top: 150px;
+				}
 
 	}
 
@@ -2139,6 +2027,9 @@ input, select, textarea {
 
 		/* Articles */
 
+		#logo-curso{
+			max-width: 70%;
+		}
 			#top {
 				text-align: center;
 				padding: 5em 0;
@@ -2161,7 +2052,9 @@ input, select, textarea {
 		line-height: 3.5em;
 	}
 
-
+	#egressos, #curso, #documentos, #eventos {
+		padding-top: 150px;
+	}
 
 	}
 
@@ -2171,11 +2064,8 @@ input, select, textarea {
 
 		/* Basic */
 
-		#logo-curso{
-			max-width: 40%;
-		}
 		#logo{
-			margin-top: 0.3em;
+			margin-top: 1em;
 			margin-bottom: 0;
 		}
 
@@ -2186,7 +2076,10 @@ input, select, textarea {
 			height: 4em;
 		}
 
-		
+		#logo-curso{
+			max-width: 100%;
+		}
+
 	#nav {
 		background-color: #428646;
 		text-align: center;
@@ -2248,6 +2141,9 @@ input, select, textarea {
 				clear: both;
 			}
 
+			#egressos, #curso, #documentos, #eventos {
+				padding-top: 130px;
+			}
 		
 
 
@@ -2372,3 +2268,69 @@ input, select, textarea {
 					}
 
 	}
+
+	
+	.slideshow-container {
+		max-width: 1000px;
+		position: relative;
+		margin: auto;
+	  }
+	  
+	  /* Hide the images by default */
+	  .mySlides {
+		display: none;
+	  }
+	  
+	  /* Next & previous buttons */
+	  .prev, .next {
+		cursor: pointer;
+		position: absolute;
+		top: 50%;
+		width: auto;
+		margin-top: -22px;
+		padding: 16px;
+		color: rgb(201, 0, 0);
+		font-weight: bold;
+		font-size: 18px;
+		transition: 0.6s ease;
+		border-radius: 0 3px 3px 0;
+		user-select: none;
+	  }
+	  
+	  /* Position the "next button" to the right */
+	  .next {
+		right: 0;
+		border-radius: 3px 0 0 3px;
+	  }
+
+	  .prev{
+		left: 0;
+	  }
+	  
+	  /* On hover, add a black background color with a little bit see-through */
+	  .prev:hover, .next:hover {
+		background-color: rgba(75, 216, 70, 0.8);
+	  }
+	  
+	  /* Caption text */
+	  .text {
+		color: #f2f2f2;
+		font-size: 15px;
+		padding: 8px 12px;
+		position: absolute;
+		bottom: 8px;
+		width: 100%;
+		text-align: center;
+	  }
+	  
+	  /* Fading animation */
+	  .fade {
+		animation-name: fade;
+		animation-duration: 1.5s;
+	  }
+	  
+	  @keyframes fade {
+		from {opacity: .4}
+		to {opacity: 1}
+	  }
+	
