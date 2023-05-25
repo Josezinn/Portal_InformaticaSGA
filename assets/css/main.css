@@ -32,11 +32,34 @@ footer, header, hgroup, menu, nav, section {
 	display: block;}
 
 #topo{
-	background-color: white;
+	background-color: white; 
 	display: flex;
 	width: 100%;
 	z-index: 10000;
-	justify-content: center;
+}
+
+#logo{
+	padding-left: 2rem; 
+}
+
+#logo a{
+	background-image: url(images/logo-instituto.png);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: block;
+	height: 46px;
+	text-indent: -9000px;
+	width: 180px;
+}
+
+#topo h1{
+	font-weight: bold;
+	margin-left: 545px;
+	font-size: 2em;
+	margin-top: 0.5em;
+	color: #000;
+	letter-spacing: 3px;
 }
 
 
@@ -177,9 +200,9 @@ input, select, textarea {
 	}
 
 	h1 {
-		font-size: 2.25em;
+		font-family: 'Open Sans', sans-serif;		
+		font-size: 1.8em;
 		letter-spacing: -0.025em;
-		font-weight: 300;
 	}
 
 		h1 strong {
@@ -201,7 +224,6 @@ input, select, textarea {
 		margin-top: 0.4em;
 		margin-bottom: 0.5em;
 	}
-
 
 	i {
 		font-style: italic;
@@ -1562,6 +1584,7 @@ input, select, textarea {
 		margin: 1em;
 	}
 
+
 		.image img {
 			display: block;
 			width: 100%;
@@ -1715,7 +1738,7 @@ input, select, textarea {
 		background-color:  #2f9e41;
 		text-align: center;
 		left: 0;
-		top: 6em;
+		top: 4.5em;
 		width: 100%;
 		z-index: 10000;
 		cursor: default;
@@ -1822,22 +1845,8 @@ input, select, textarea {
 		font-size: 0.9em;
 	}
 
+
 	/* Tela inicial */
-
-	.professores-container{
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-
-	}
-
-	.professores{
-		display: flex; 
-		align-items: center;
-		gap: 10%;
-		margin-bottom: 5%;	
-	}
-	
 	.professores img{
 		border-radius: 50%;
 		max-width: 30%;
@@ -1847,12 +1856,8 @@ input, select, textarea {
 		text-align: center;
 	}
 
-	.professores img, h3{
-		display: inline-block;
-	}
-
 	.professores h3{
-		float: left;
+		float: center;
 	}
 
 	.professores p {
@@ -1954,7 +1959,7 @@ input, select, textarea {
 
 /* Large */
 
-	@media screen and (min-width: 1400px) {
+	@media screen and (min-width: 990px) {
 
 		/* Basic */
 
@@ -1970,6 +1975,31 @@ input, select, textarea {
 				margin: 0 0 4em 0;
 			}
 
+			
+			
+			 /* Tela professores */
+
+			.professores-container{
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+		
+			}
+
+			.professores{
+				display: flex; 
+				align-items: center;
+				gap: 10%;
+				margin-bottom: 5%;	
+			}
+
+			.professores img, h3{
+				display: inline-block;
+			}
+
+			.professores h3{
+				float: left;
+			}
 
 		/* Wrappers */
 
@@ -2010,8 +2040,9 @@ input, select, textarea {
 
 
 				#logo-curso{
-					max-width: 50%;
-					padding: 29px;
+					max-width: 40%;
+					margin: 29px;
+					border-radius: 4px;
 				}
 
 				#egressos, #curso, #documentos, #eventos {
@@ -2028,7 +2059,7 @@ input, select, textarea {
 		/* Articles */
 
 		#logo-curso{
-			max-width: 70%;
+			max-width: 60%;
 		}
 			#top {
 				text-align: center;
@@ -2044,7 +2075,7 @@ input, select, textarea {
 		background-color: #428646;
 		text-align: center;
 		left: 0;
-		top: 6em;
+		top: 5em;
 		width: 100%;
 		z-index: 10000;
 		cursor: default;
@@ -2064,9 +2095,19 @@ input, select, textarea {
 
 		/* Basic */
 
+		#logo a{
+			background-position: -35px -21px;
+			background-size: auto 40px;
+			height: 19px;
+			width: 125px; 
+		}
+
 		#logo{
-			margin-top: 1em;
-			margin-bottom: 0;
+			padding: 1.7em;
+		}
+
+		#topo h1 {
+			margin: auto;
 		}
 
 		.logoIF{
@@ -2078,13 +2119,16 @@ input, select, textarea {
 
 		#logo-curso{
 			max-width: 100%;
+			border-radius: 4px;
 		}
+
+
 
 	#nav {
 		background-color: #428646;
 		text-align: center;
 		left: 0;
-		top: 6em;
+		top: 5em;
 		width: 100%;
 		z-index: 10000;
 		cursor: default;
@@ -2141,7 +2185,7 @@ input, select, textarea {
 				clear: both;
 			}
 
-			#egressos, #curso, #documentos, #eventos {
+			#egressos, #curso, #documentos, #eventos, #professores, #laboratorios {
 				padding-top: 130px;
 			}
 		
@@ -2269,6 +2313,7 @@ input, select, textarea {
 
 	}
 
+	/* Slideshow laboratórios*/
 	
 	.slideshow-container {
 		max-width: 1000px;
@@ -2305,19 +2350,22 @@ input, select, textarea {
 
 	  .prev{
 		left: 0;
+		border-radius: 3px 0 0 3px;
 	  }
 	  
 	  /* On hover, add a black background color with a little bit see-through */
 	  .prev:hover, .next:hover {
-		background-color: rgba(75, 216, 70, 0.8);
+		background-color: #f2f2f2;
 	  }
 	  
 	  /* Caption text */
 	  .text {
-		color: #f2f2f2;
-		font-size: 15px;
+		background-color: white;
+		color: black;
+		font-size: 20px;
 		padding: 8px 12px;
 		position: absolute;
+		font-weight: bold;
 		bottom: 8px;
 		width: 100%;
 		text-align: center;
