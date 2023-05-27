@@ -25,7 +25,10 @@
 			}, 100);
 		});
 
-	
+	//Iniciar Ler mais.
+		$(document).ready(function() {
+			$('.ler-mais').adicionarEventoLerMais();
+		});
 
 })(jQuery);
 

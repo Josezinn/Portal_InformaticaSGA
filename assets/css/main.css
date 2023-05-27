@@ -38,6 +38,11 @@ footer, header, hgroup, menu, nav, section {
 	z-index: 10000;
 }
 
+/*Ler mais*/
+.ler-mais{
+	display: none;
+}
+
 #logo{
 	padding-left: 2rem; 
 }
@@ -2112,7 +2117,19 @@ input, select, textarea {
 			border-radius: 4px;
 		}
 
-
+		/* Botao Ler mais*/
+		.escondido {
+			display: none;
+		}
+		.ler-mais{
+			display: block;
+			background-color: #2f9e41;
+			color: white;
+			width: 50%;
+			margin-left: auto;
+			margin-right: auto;
+			border-radius: 10px;
+		}
 
 	#nav {
 		background-color: #428646;
