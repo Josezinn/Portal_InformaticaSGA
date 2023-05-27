@@ -1864,6 +1864,7 @@ input, select, textarea {
 		text-align: justify;
 		font-size: medium;
 		color: #000;
+		margin: 0;
 	}
 
 	#curso p {
@@ -2130,6 +2131,7 @@ input, select, textarea {
 			margin-right: auto;
 			border-radius: 10px;
 			border: none;
+			margin-bottom: 2em;
 		}
 
 	#nav {
