@@ -1798,9 +1798,7 @@ input, select, textarea {
 					border-right: solid 0.75em transparent;
 					border-top: solid 0.6em #282828;
 				}
-
-			
-
+		
 /* Articles */
 	
 	#articles{
@@ -1839,11 +1837,7 @@ input, select, textarea {
 			#top p a {
 				color: inherit;
 			}
-
-	#contact footer {
-		font-size: 0.9em;
-	}
-
+			
 
 	/* Tela inicial */
 	.professores img{
@@ -1937,51 +1931,7 @@ input, select, textarea {
 		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 	}
 
-	
-	
-	
 
-/* Copyright */
-
-	#copyright {
-		color: #fffefe;
-		font-size: 1em;
-		line-height: 1em;
-		list-style: none;
-		padding-left: 0;
-		margin-bottom: 0;
-	}
-
-		#copyright li {
-			display: inline-block;
-			border-left: solid 1px rgba(0, 0, 0, 0.5);
-			box-shadow: -1px 0px 0px 0px rgba(255, 255, 255, 0.1);
-			padding: 0 0 0 1em;
-			margin: 0 0 0 1em;
-		}
-
-			#copyright li:first-child {
-				border: 0;
-				box-shadow: none;
-				padding-left: 0;
-				margin-left: 0;
-			}
-
-		#copyright a {
-			-moz-transition: color .2s ease-in-out;
-			-webkit-transition: color .2s ease-in-out;
-			-ms-transition: color .2s ease-in-out;
-			transition: color .2s ease-in-out;
-			color: inherit;
-		}
-
-			#copyright a:hover {
-				color: #777;
-			}
-
-			footer{
-				background-color: #2f9e41;
-			}
 
 /* Large */
 
@@ -2329,30 +2279,9 @@ input, select, textarea {
 			#geral{
 				margin-top: 3em;
 			}
-
-			
-
-		/* Copyright */
-
-			#copyright {
-				font-size: 1em;
-				margin: 0;
-			}
-
-				#copyright li {
-					display: block;
-					margin: 1em 0 0 0;
-					padding: 0;
-					box-shadow: none;
-					border-left: 0;
-				}
-
-					#copyright li:first-child {
-						margin-top: 0;
-					}
-
 	}
 
+	
 	/* Slideshow laboratórios*/
 	
 	.slideshow-container {

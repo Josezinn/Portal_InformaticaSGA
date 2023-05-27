@@ -29,8 +29,6 @@
 
 })(jQuery);
 
-let btnTopo = document.querySelector(".btn-topo");
-
 let slideIndex = 1;
 showSlides(slideIndex);
 
