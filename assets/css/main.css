@@ -1950,6 +1950,34 @@ input, select, textarea {
 		font-size: large;
 	}
 
+	#documentos a {
+		display: block;
+		text-align: left;
+		margin-bottom: 3px;
+	}
+
+	.praticaProfissional, .matrizCurricular, .ppcInformatica{
+		margin-bottom: 2em;
+	}
+
+	.paginaComDocumento html {
+		width: 100%;
+		height: 100%;
+		margin: 0;
+	}
+
+	.paginaComDocumento body {
+		width: 100%;
+		height: 100%;
+		margin: 0;
+	}
+	.paginaComDocumento div {
+		width: 100%;
+		height: 100%;
+		margin: 0;
+	}
+	
+
 
 
 
@@ -2402,4 +2430,4 @@ input, select, textarea {
 	  @keyframes fade {
 		from {opacity: .4}
 		to {opacity: 1}
-	 
+	  }
