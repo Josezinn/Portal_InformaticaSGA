@@ -49,7 +49,28 @@
 						<p>
 							As diretrizes e requisitos específicos para a elaboração e cadastramento do Relatório de Prática Profissional está anexado nos links abaixo.
 						</p>
-						<a href="documents/PRATICA_PROFISSIONAL_PLANO_DE_ATIVIDADES_MODELOS.doc">Cadastramento da Prática Profissional</a>
+						<!--<a href="documents/PRATICA_PROFISSIONAL_PLANO_DE_ATIVIDADES_MODELOS.doc">Cadastramento da Prática Profissional</a>-->
+						<a id="download-link" href="https://docs.google.com/document/d/1I1e7jhw4OAaPXL0DEpcTT3Gr1mt_ezS0/edit?usp=share_link&ouid=101031481782225489246&rtpof=true&sd=true">Visualizar Documento</a>
+
+							<script>
+							// Verifica se o dispositivo é um celular
+							function isMobileDevice() {
+							return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+							}
+
+							// Define o comportamento do link com base no tipo de dispositivo
+							var downloadLink = document.getElementById("download-link");
+							if (isMobileDevice()) {
+							downloadLink.setAttribute("href", "documents/PRATICA_PROFISSIONAL_PLANO_DE_ATIVIDADES_MODELOS.doc"); // Altera o atributo "href" para o caminho do arquivo a ser baixado no celular
+							downloadLink.setAttribute("download", "PRATICA_PROFISSIONAL_PLANO_DE_ATIVIDADES_MODELOS.doc"); // Adiciona o atributo "download" para forçar o download no celular
+							} else {
+							downloadLink.setAttribute("target", "_blank"); // Abre o link em uma nova aba no PC
+							}
+							</script>
+
+
+
+
 						<a href="modelo_pratica_estagio.html">Modelo de Prática Profissonal para Estágios</a> 
 						<a href="modelo_pratica_pesquisa.html">Modelo de Prática Profissonal para Pesquisas</a>
 					</div>
