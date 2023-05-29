@@ -62,6 +62,7 @@ footer, header, hgroup, menu, nav, section {
 #topo h1{
 	font-weight: bold;
 	font-size: 2em;
+	margin: auto;
 	margin-top: 0.5em;
 	color: #000;
 	letter-spacing: 3px;
@@ -1731,7 +1732,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style3 {
-			background-color: #f4f4f4;
+			background-color: #ffffff;
 			text-shadow: 1px 1px 0px #fff;
 		}
 
@@ -1743,7 +1744,7 @@ input, select, textarea {
 		background-color:  #2f9e41;
 		text-align: center;
 		left: 0;
-		top: 4.3em;
+		top: 4em;
 		width: 100%;
 		z-index: 10000;
 		cursor: default;
@@ -1899,7 +1900,11 @@ input, select, textarea {
 		
 	}
 
-	/* Tela Eventos */
+	/* Tela SETIC */
+
+	#setic h2{
+		padding-top: 20px;
+	}
 
 	#setic p {
 		text-align: justify;
@@ -1958,6 +1963,11 @@ input, select, textarea {
 
 	.praticaProfissional, .matrizCurricular, .ppcInformatica{
 		margin-bottom: 2em;
+		padding: 10px;
+	}
+
+	.organizacaoDidatica{
+		padding: 10px;
 	}
 
 	.paginaComDocumento html {
@@ -1977,6 +1987,28 @@ input, select, textarea {
 		margin: 0;
 	}
 	
+
+	.card {
+		/* Add shadows to create the "card" effect */
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		transition: 0.3s;
+	  }
+	  
+	  /* On mouse-over, add a deeper shadow */
+	  .card:hover {
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	  }
+	  
+	  /* Add some padding inside the card container */
+	  .container {
+		padding: 2px 16px;
+	  }
+
+	  .card {
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		transition: 0.3s;
+		border-radius: 5px; /* 5px rounded corners */
+	  }
 
 
 
@@ -2000,10 +2032,6 @@ input, select, textarea {
 
 			header {
 				margin: 0 0 4em 0;
-			}
-
-			#topo h1{
-				margin-left: 545px;
 			}
 			
 			
@@ -2100,10 +2128,6 @@ input, select, textarea {
 					margin: 0 auto 2em auto;
 				}
 
-				
-			#topo h1{
-				margin-left: 90px;
-			}
 
 				
 	#nav {
@@ -2135,15 +2159,21 @@ input, select, textarea {
 		}
 
 		#logo a{
-			background-position: -35px -21px;
-			background-size: auto 40px;
-			height: 19px;
-			width: 125px; 
+			background-image: url(images/simbolo-if.png);
+			background-position: 0 0;
+			background-repeat: no-repeat;
+			background-size: contain;
+			display: block;
+			height: 46px;
+			text-indent: -9000px;
+			width: 100px;
 		}
 
 		#logo{
-			padding: 1.7em;
+			padding-left: 0;
 		}
+	
+
 
 		#topo h1 {
 			font-size: 25px;
