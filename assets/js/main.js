@@ -30,6 +30,11 @@
 			$('.ler-mais').adicionarEventoLerMais();
 		});
 
+	//Iniciar abertura de documentoDOC
+		$(document).ready(function() {
+			$('.abrirDOC').abrirDocumentoDOC();
+	  	});	
+
 })(jQuery);
 
 let slideIndex = 1;

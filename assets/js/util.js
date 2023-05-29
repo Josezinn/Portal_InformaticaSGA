@@ -508,5 +508,32 @@
 	});
   };
 
+  //FUnção para Abrir os documentos
+  $.fn.abrirDocumentoDOC = function() {
+    // Verifica se o dispositivo é um celular
+    function isMobileDevice() {
+      return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+    }
+  
+    // Função para ajustar o comportamento do link do documento DOC
+    function adjustDownloadLink(link) {
+      var url = link.attr("href");
+      if (isMobileDevice()) {
+        link.attr("download", ""); // Adiciona o atributo "download" para forçar o download no celular
+        link.attr("href", url.replace("/edit?usp=sharing", "/export?format=doc")); // Substitui o link para o formato de download do Google Docs no celular
+      } else {
+        link.removeAttr("target"); // Remove o atributo "target" para abrir o link na mesma aba no PC
+      }
+    }
+  
+    return this.each(function() {
+      var link = $(this);
+      link.on("click", function() {
+        adjustDownloadLink(link);
+      });
+    });
+  };
+  
+
   
 })(jQuery);
