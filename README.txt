@@ -1,4 +1,4 @@
-# Portal do Curso de Informática do IFRN Campus São Gonçalo do Amarante
+# Portal do Curso de Informática do IFRN Campus São Gonçalo do Amarante #
 
 Este projeto tem como objetivo criar um portal para o curso de informática do IFRN Campus São Gonçalo do Amarante. O site foi desenvolvido utilizando o software Visual Studio, com marcação HTML5, CSS e JS. O portal fornecerá informações sobre o curso, como ficha técnica, estágio para estudantes, perfil do egresso, entre outros. Também serão apresentados os professores responsáveis pelas disciplinas técnicas e os laboratórios disponíveis para os alunos do curso.
 
