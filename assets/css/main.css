@@ -2062,17 +2062,28 @@ input, select, textarea {
 	}
 	
 	/*card*/
+
+	.dark-mode .card{
+		box-shadow: 0 4px 8px 0 rgb(26, 25, 25);
+	}
+
+	
 	.card {
 		/* Add shadows to create the "card" effect */
-		box-shadow: 0 4px 8px 0 rgb(26, 25, 25);
+		box-shadow: 0 4px 8px 0 rgb(82, 82, 82);
 		transition: 0.3s;
 		border-radius: 5px; /* 5px rounded corners */
 		padding: 50px;
 	  }
 	  
 	  /* On mouse-over, add a deeper shadow */
-	  .card:hover {
+	  .dark-mode .card:hover{
 		box-shadow: 0 8px 16px 0 rgb(26, 25, 25);
+
+	  }
+
+	  .card:hover {
+		box-shadow: 0 8px 16px 0 rgb(87, 86, 86);
 	  }
 	  
 /* Large */
