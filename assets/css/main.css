@@ -23,15 +23,15 @@
 }
 
 .dark-mode{
-	--background:#202124;
+	--background:#323335;
 	--grey-500:#848484;
 	--grey-900:#222;
 	--letter:#ffffff;
 	--green-400:#6eaa66;
 	--green-300:#378a34;
-	--nav:#202124;
+	--nav:#323335;
 	--green-100:#46af39;
-	--box-background:#222;
+	--box-background:#302f2f;
 }
 
 html, body, div, span, applet, object,
@@ -1635,6 +1635,9 @@ input, select, textarea {
 
 /* Image */
 
+	.dark-mode .campus{
+		background-color: var(--box-background);
+	}
 
 	.campus img{
 		margin-top: 110px;
@@ -1804,6 +1807,7 @@ input, select, textarea {
 /* Nav */
 
 	#nav {
+		box-shadow: 0 3px 6px 0 rgba(0,0,0,0.16);
 		background-color:  var(--nav);
 		text-align: center;
 		left: 0;
@@ -1877,6 +1881,7 @@ input, select, textarea {
 				padding: 1em;
 				margin-top: 0;
 				font-size: smaller;
+				text-align: center;
 			}
 
 			footer a{
@@ -2059,7 +2064,7 @@ input, select, textarea {
 	/*card*/
 	.card {
 		/* Add shadows to create the "card" effect */
-		box-shadow: 0 4px 8px 0 var(--letter);
+		box-shadow: 0 4px 8px 0 rgb(26, 25, 25);
 		transition: 0.3s;
 		border-radius: 5px; /* 5px rounded corners */
 		padding: 50px;
@@ -2067,7 +2072,7 @@ input, select, textarea {
 	  
 	  /* On mouse-over, add a deeper shadow */
 	  .card:hover {
-		box-shadow: 0 8px 16px 0 var(--letter)
+		box-shadow: 0 8px 16px 0 rgb(26, 25, 25);
 	  }
 	  
 /* Large */
