@@ -18,6 +18,7 @@
 			small:   [ null,      '736px'  ]
 		});
 
+
 	// Play initial animations on page load.
 		$window.on('load', function() {
 			window.setTimeout(function() {
@@ -37,6 +38,11 @@
 
 })(jQuery);
 
+function myFunction() {
+	var element = document.body;
+	element.classList.toggle("dark-mode");
+  }
+  
 let slideIndex = 1;
 showSlides(slideIndex);
 

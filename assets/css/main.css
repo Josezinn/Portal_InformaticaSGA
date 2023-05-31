@@ -8,6 +8,31 @@
 */
 
 /*colors*/
+:root{
+	--background:white;
+	--grey-500:#848484;
+	--grey-900:#222;
+	--letter-nav:white;
+	--letter:#000;
+	--green-400:#6eaa66;
+	--green-300:#378a34;
+	--green-200:#2f9e41;
+	--nav:#2f9e41;
+	--green-100:#46af39;
+	--box-background:#fff;
+}
+
+.dark-mode{
+	--background:#202124;
+	--grey-500:#848484;
+	--grey-900:#222;
+	--letter:#ffffff;
+	--green-400:#6eaa66;
+	--green-300:#378a34;
+	--nav:#202124;
+	--green-100:#46af39;
+	--box-background:#222;
+}
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -35,7 +60,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;}
 
 #topo{
-	background-color: white; 
+	background-color: var(--background); 
 	display: flex;
 	width: 100%;
 	z-index: 10000;
@@ -49,6 +74,10 @@ footer, header, hgroup, menu, nav, section {
 /*Sociais*/
 .social-button.instagram {
     background-image: url(images/icon-instagram.svg);
+}
+
+.dark-mode .social-button.instagram {
+	background-image: url(images/icon-instagram-white.svg);
 }
 
 .social-button {
@@ -65,13 +94,59 @@ footer, header, hgroup, menu, nav, section {
     width: 36px;
 }
 
-.social-button:hover{
-	color: #000;
+/*button dark mode*/
+body.dark-mode header .actions button.dark-mode {
+    color: var(--green-200); 
+}
+
+.action-button .material-icons {
+    font-size: 1.8rem;
+    line-height: 34px;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+}
+
+.action-button {
+    background-color: transparent;
+    color: var(--grey-500);
+    cursor: pointer;
+    display: block;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    text-decoration: none;
+    width: 36px;
+	border: 0 none;
+}
+
+.action-button:hover {
+    background-color: transparent;
+    color: var(--grey-900);
+}
+
+body.darkMode header .actions button.darkMode {
+    color: var(--green-200);
 }
 
 /*Inicio*/
 #logo{
 	padding-left: 2rem; 
+}
+
+.dark-mode #logo a {
+	background-image: url(images/logo-contraste.svg);
 }
 
 #logo a{
@@ -90,15 +165,8 @@ footer, header, hgroup, menu, nav, section {
 	font-size: 2em;
 	margin: auto;
 	margin-top: 0.5em;
-	color: #000;
+	color: var(--letter);
 	letter-spacing: 3px;
-}
-
-#topo h3{
-	font-weight: lighter;
-	font-size: 0.8em;
-	color: #3e3e3e;
-	justify-content: end;
 }
 
 
@@ -175,7 +243,6 @@ input, select, textarea {
 	body, input, textarea, select {
 		font-family: 'Open Sans', sans-serif;
 		line-height: 1.85em;
-		color: #888;
 		font-weight: 300;
 		font-size: 13pt;
 	}
@@ -206,26 +273,8 @@ input, select, textarea {
 		font-style: italic;
 	}
 
-	sub {
-		position: relative;
-		top: 0.5em;
-		font-size: 0.8em;
-	}
-
-	sup {
-		position: relative;
-		top: -0.5em;
-		font-size: 0.8em;
-	}
-
-	blockquote {
-		border-left: solid 0.75em #eee;
-		padding: 1em 0 1em 1.5em;
-		font-style: italic;
-	}
-
 	h1, h2, h3, h4, h5, h6 {
-		color: #000000;
+		color:var(--letter);
 		margin: 0 0 0.75em 0;
 	}
 
@@ -277,14 +326,6 @@ input, select, textarea {
 		clear: both;
 	}
 
-	hr {
-		border: 0;
-		border-top: solid 1px #444;
-		border-top-color: rgba(0, 0, 0, 0.35);
-		box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
-		height: 1px;
-		margin: 3em 0;
-	}
 
 	p, ul, ol, dl, table {
 		margin-bottom: 2em;
@@ -297,16 +338,6 @@ input, select, textarea {
 		header > p {
 			font-size: 1.25em;
 			margin: 0;
-		}
-
-		
-
-	footer {
-		margin: 1em 0 0 0;
-	}
-
-		footer > p {
-			font-size: 1.25em;
 		}
 
 		
@@ -1598,10 +1629,6 @@ input, select, textarea {
 
 /* Section/Article */
 
-	section, article {
-		margin-bottom: 3em;
-	}
-
 	section > :last-child,
 	article > :last-child,
 	section:last-child,
@@ -1692,7 +1719,7 @@ input, select, textarea {
 			position:absolute;
 			top:25px;
 			left:0;
-			background-color:#378a34;
+			background-color:var(--nav);
 			display:none;
 			}
 
@@ -1725,7 +1752,7 @@ input, select, textarea {
 /* Box */
 
 	.box {
-		background: #fff;
+		background: var(--box-background);
 		box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
 		text-align: center;
 		padding: 2em;
@@ -1762,17 +1789,17 @@ input, select, textarea {
 
 		.wrapper.style1 {
 			background-image: none;
-			background-color: #fff;
+			background-color: var(--box-background);
 		}
 
 		.wrapper.style2 {
-			background-color: #fafafa;
-			text-shadow: 1px 1px 0px #fff;
+			background-color: var(--background);
+			text-shadow: 1px 1px 0px var(--box-background);
 		}
 
 		.wrapper.style3 {
-			background-color: #ffffff;
-			text-shadow: 1px 1px 0px #fff;
+			background-color: var(--box-background);
+			text-shadow: 1px 1px 0px var(--box-background);
 		}
 
 
@@ -1780,10 +1807,11 @@ input, select, textarea {
 /* Nav */
 
 	#nav {
-		background-color:  #2f9e41;
+		background-color:  var(--nav);
 		text-align: center;
 		left: 0;
 		top: 4em;
+		color: var(--letter-nav);
 		width: 100%;
 		z-index: 10000;
 		cursor: default;
@@ -1792,10 +1820,11 @@ input, select, textarea {
 	}
 
 	#nav a.selected{
-		background-color:#46af39;
+		background-color:var(--green-100);
 	}
 
 		#nav ul {
+			background-color: var(--nav);
 			margin-bottom: 0;
 			list-style: none;
 			padding-left: 0;
@@ -1813,26 +1842,24 @@ input, select, textarea {
 			transition: background-color .2s ease-in-out;
 			position: relative;
 			display: block;
-			color: #fff;
+			color: var(--letter-nav);
 			text-decoration: none;
 			outline: 0;
 			font-weight: 600;
 			border-radius: 8px;
-			color: #fff;
 			height: 2.5em;
 			line-height: 2.5em;
 			padding: 0 1.25em;
 		}
 
 			#nav a:hover {
-				color: #fff !important;
-				background: #46af39;
+				color: var(--box-background) !important;
+				background: var(--green-100);
 			}
 
 			#nav a.active {
-				background: #6eaa66;
+				background: var(--green-400);
 			}
-
 
 				#nav a.active:before {
 					content: '';
@@ -1845,6 +1872,20 @@ input, select, textarea {
 					border-top: solid 0.6em #282828;
 				}
 		
+		/*Footer*/
+			footer{
+				font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+				background-color: var(--nav);
+				color: var(--letter-nav);
+				padding: 1em;
+				font-size:small;
+			}
+
+			footer a{
+				color: var(--letter-nav);
+			}
+
+
 /* Articles */
 	
 	body > article {
@@ -1899,7 +1940,7 @@ input, select, textarea {
 		float: left;
 		text-align: justify;
 		font-size: medium;
-		color: #000;
+		color: var(--letter);
 		margin: 0;
 	}
 
@@ -1907,7 +1948,7 @@ input, select, textarea {
 		text-align: justify;
 		margin: 0;
 		margin-top: 1em;
-		color: #000;
+		color: var(--letter);
 		font-size: medium;
 		
 	}
@@ -1935,13 +1976,9 @@ input, select, textarea {
 
 	/* Tela SETIC */
 
-	#setic h2{
-		padding-top: 20px;
-	}
-
 	#setic p {
 		text-align: justify;
-		color: #000;
+		color: var(--letter);
 		margin: 0;
 		margin-top: 3em;
 		
@@ -1968,14 +2005,14 @@ input, select, textarea {
 	}
 
 	#egressos p {
-		color: #000;
+		color: var(--letter);
 		
 	}
 
 	/* Tela Documentos */
 
 	#documentos p {
-		color: #000;
+		color: var(--letter);
 		text-align: justify;	
 	}
 
@@ -2020,9 +2057,10 @@ input, select, textarea {
 		margin: 0;
 	}
 	
+	/*card*/
 	.card {
 		/* Add shadows to create the "card" effect */
-		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		box-shadow: 0 4px 8px 0 var(--letter);
 		transition: 0.3s;
 		border-radius: 5px; /* 5px rounded corners */
 		padding: 50px;
@@ -2030,12 +2068,9 @@ input, select, textarea {
 	  
 	  /* On mouse-over, add a deeper shadow */
 	  .card:hover {
-		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+		box-shadow: 0 8px 16px 0 var(--letter)
 	  }
 	  
-	
-
-
 /* Large */
 
 	@media screen and (min-width: 990px) {
@@ -2054,8 +2089,8 @@ input, select, textarea {
 				margin: 0 0 4em 0;
 			}
 			
-			.social-button.instagram{
-				margin-right: 150px;
+			.action-button{
+				margin-right: 130px;
 			}
 
 			.campus img {
@@ -2160,7 +2195,7 @@ input, select, textarea {
 			}
 				
 	#nav {
-		background-color: #428646;
+		background-color: var(--nav);
 		text-align: center;
 		left: 0;
 		top: 4em;
@@ -2202,8 +2237,6 @@ input, select, textarea {
 			padding-left: 0;
 		}
 	
-
-
 		#topo h1 {
 			font-size: 25px;
 			margin: auto;
@@ -2228,8 +2261,8 @@ input, select, textarea {
 		}
 		.ler-mais{
 			display: block;
-			background-color: #2f9e41;
-			color: white;
+			background-color: var(--green-200);
+			color: var(--background);
 			width: 50%;
 			margin-left: auto;
 			margin-right: auto;
@@ -2239,10 +2272,10 @@ input, select, textarea {
 		}
 
 	#nav {
-		background-color: #428646;
+		background-color: var(--nav);
 		text-align: center;
 		left: 0;
-		top: 4em;
+		top: 5em;
 		width: 100%;
 		z-index: 10000;
 		cursor: default;
@@ -2377,7 +2410,7 @@ input, select, textarea {
 				}
 
 					#nav a:hover {
-						background-color: #46af39;
+						background-color: var(--green-100);
 					}
 
 		/* Articles */
@@ -2427,7 +2460,7 @@ input, select, textarea {
 		width: auto;
 		margin-top: -22px;
 		padding: 16px;
-		color: rgb(201, 0, 0);
+		color: var(--green-400);
 		font-weight: bold;
 		font-size: 18px;
 		transition: 0.6s ease;
@@ -2448,13 +2481,13 @@ input, select, textarea {
 	  
 	  /* On hover, add a black background color with a little bit see-through */
 	  .prev:hover, .next:hover {
-		background-color: #f2f2f2;
+		background-color: var(--box-background);
 	  }
 	  
 	  /* Caption text */
 	  .text {
-		background-color: white;
-		color: black;
+		background-color: var(--background);
+		color: var(--letter);
 		font-size: 20px;
 		padding: 8px 12px;
 		position: absolute;
