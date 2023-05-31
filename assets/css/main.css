@@ -1875,12 +1875,13 @@ input, select, textarea {
 				background-color: var(--nav);
 				color: var(--letter-nav);
 				padding: 1em;
-				font-size:small;
 				margin-top: 0;
+				font-size: smaller;
 			}
 
 			footer a{
 				color: var(--letter-nav);
+				margin-left: 10px;
 			}
 
 

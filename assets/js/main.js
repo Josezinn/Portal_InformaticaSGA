@@ -4,6 +4,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+
 (function($) {
 
 	var	$window = $(window),
@@ -38,16 +39,15 @@
 
 })(jQuery);
 
-localStorage.setItem('theme', 'dark-mode'); 
-localStorage.getItem('theme');
 
-const theme = window.localStorage.getItem("theme"); 
-if (theme === "dark-mode") document.body.classList.add("dark-mode");
+//const theme = window.localStorage.getItem("theme"); 
+//if (theme === "dark-mode") document.body.classList.add("dark-mode");
 
 function myFunction() {
 	var element = document.body;
 	element.classList.toggle("dark-mode");
-  }
+	localStorage.getItem('theme')=="dark-mode"?localStorage.setItem("theme","light"):localStorage.setItem("theme","dark-mode")
+}
   
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -65,13 +65,15 @@ function currentSlide(n) {
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+  if(slides){
+ 
+	if (n > slides.length)
+	 {slideIndex = 1}
+	if (n < 1) {slideIndex = slides.length}
+	for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";
+	}
+	
+	slides[slideIndex-1].style.display = "block";
   }
-  
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
 }
