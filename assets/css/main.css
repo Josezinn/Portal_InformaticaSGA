@@ -131,14 +131,11 @@ body.dark-mode header .actions button.dark-mode {
 	border: 0 none;
 }
 
-.action-button:hover {
+.dark-mode .action-button:hover {
     background-color: transparent;
-    color: var(--grey-900);
+    color: var(--letter-nav);
 }
 
-body.darkMode header .actions button.darkMode {
-    color: var(--green-200);
-}
 
 /*Inicio*/
 #logo{
@@ -1879,6 +1876,7 @@ input, select, textarea {
 				color: var(--letter-nav);
 				padding: 1em;
 				font-size:small;
+				margin-top: 0;
 			}
 
 			footer a{
@@ -2193,12 +2191,12 @@ input, select, textarea {
 			.campus img{
 				margin-top: 95px;
 			}
-				
+
 	#nav {
 		background-color: var(--nav);
 		text-align: center;
 		left: 0;
-		top: 4em;
+		top: 4.5em;
 		width: 100%;
 		z-index: 10000;
 		cursor: default;
@@ -2220,6 +2218,14 @@ input, select, textarea {
 
 		.professores img{
 			max-width: 60%;
+		}
+
+		.dark-mode #logo a{
+			background-image: url(images/simbolo-if.png);
+		}
+
+		.action-button{
+			margin-right: 7px;
 		}
 
 		#logo a{
@@ -2275,7 +2281,7 @@ input, select, textarea {
 		background-color: var(--nav);
 		text-align: center;
 		left: 0;
-		top: 5em;
+		top: 4.5em;
 		width: 100%;
 		z-index: 10000;
 		cursor: default;
@@ -2314,9 +2320,7 @@ input, select, textarea {
 					font-size: 1.25em;
 				}
 
-			footer {
-				margin: 2.5em 0 0 0;
-			}
+			
 
 				footer > p {
 					font-size: 1.25em;

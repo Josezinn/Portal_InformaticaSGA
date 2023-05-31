@@ -38,6 +38,12 @@
 
 })(jQuery);
 
+localStorage.setItem('theme', 'dark-mode'); 
+localStorage.getItem('theme');
+
+const theme = window.localStorage.getItem("theme"); 
+if (theme === "dark-mode") document.body.classList.add("dark-mode");
+
 function myFunction() {
 	var element = document.body;
 	element.classList.toggle("dark-mode");
